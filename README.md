@@ -12,8 +12,8 @@ Wazuh instance with soar integration with a fully functional case management usi
 ### Tools Used
 
 - Diagram (draw.io) 
-- Splunk a Security Information and Event Management (SIEM) system for log ingestion and analysis.
-- Telemetry generation tools to create realistic network traffic and attack scenarios.
+- 
+
 
 ## Steps
 
