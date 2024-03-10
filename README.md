@@ -14,7 +14,7 @@ Wazuh instance with soar integration with a fully functional case management usi
 - Diagram (draw.io) 
 - Virtual Box
 
-### Quick Guides
+### Guides
 
 <a href="https://github.com/GitSavior/Installing-VirtualBox-Instructions/tree/main">Installing VirtualBox Instructions</a><br>
 <a href="https://github.com/GitSavior/Creating-Windows-10-VM/tree/main">Creating a Windows 10 VM</a>
@@ -23,7 +23,7 @@ Wazuh instance with soar integration with a fully functional case management usi
 
 #### Step 1: Creating a diagram and how to build out our lab logically. Build a visual to understand of data will flow and the pieces requires that makes it work.
 
-![1](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/50c83104-710f-41da-a08a-565819c541a0)
+![Network Diagram drawio](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/923cd150-3e02-41f1-92b9-53b616408172)
 
 #### Step 2: Install applications and virtual machines. One Windows 10 OS running Sysmon, one Ubuntu Server running Wazuh, and one Ubuntu running Server TheHive.
 
