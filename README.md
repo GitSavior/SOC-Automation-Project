@@ -6,7 +6,7 @@ Wazuh instance with soar integration with a fully functional case management usi
 
 ### Skills Learned
 
-- Creating a diagram and how to build out our lab logically
+- Creating a diagram to show how our lab is built out logically
 - 
 
 ### Tools Used
