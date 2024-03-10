@@ -12,8 +12,10 @@ Wazuh instance with soar integration with a fully functional case management usi
 ### Tools Used
 
 - Diagram (draw.io) 
-- 
+- Virtual Box
 
+### Quick Guides
+<a href="https://github.com/GitSavior/Installing-VirtualBox-Instructions/tree/main">Installing-VirtualBox-Instructions</a>
 
 ## Steps
 
