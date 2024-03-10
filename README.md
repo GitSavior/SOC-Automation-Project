@@ -17,7 +17,8 @@ Wazuh instance with soar integration with a fully functional case management usi
 ### Guides
 
 <a href="https://github.com/GitSavior/Installing-VirtualBox-Instructions/tree/main">Installing VirtualBox Instructions</a><br>
-<a href="https://github.com/GitSavior/Creating-Windows-10-VM/tree/main">Creating a Windows 10 VM</a>
+<a href="https://github.com/GitSavior/Creating-Windows-10-VM/tree/main">Creating a Windows 10 VM</a><br>
+<a href="https://github.com/GitSavior/Creating-Ubuntu-VM/tree/main">Creating a Ubuntu VM</a>
 
 ## Steps
 
