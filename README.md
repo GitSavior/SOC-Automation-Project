@@ -15,8 +15,9 @@ Wazuh instance with soar integration with a fully functional case management usi
 - Virtual Box
 
 ### Quick Guides
-<a href="https://github.com/GitSavior/Installing-VirtualBox-Instructions/tree/main">Installing-VirtualBox-Instructions</a>
+<a href="https://github.com/GitSavior/Installing-VirtualBox-Instructions/tree/main">Installing VirtualBox Instructions</a>
 
+<a href="https://github.com/GitSavior/Creating-Windows-10-VM/tree/main">Creating a Windows 10 VM</a>
 ## Steps
 
 #### Step 1: Creating a diagram and how to build out our lab logically. Build a visual to understand of data will flow and the pieces requires that makes it work.
