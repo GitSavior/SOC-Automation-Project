@@ -63,46 +63,54 @@ Wazuh instance with soar integration with a fully functional case management usi
 
 ![image](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/3796ddbb-d12a-4ee2-88c0-4cb2194e43be)
 
-#### Step 4: Generate telemetry and import it into wazuh. Configure Wazuh and configure Telemetry including Minikatz, which generated Mimikatz custom alert
+### Step 4: Generate telemetry and import it into wazuh. Configure Wazuh and configure Telemetry including Minikatz, which generated Mimikatz custom alert
 
-#### Make a backup before making any changes to the orginial conf
+#### Making Copy of ossec.conf file for good practice. Then opening notpad in administrator otherwise cannot edit the ossec.conf file. Then locating the sysmon in event viewer and copying the full name "Microsoft-Windows-Sysmon/Operational". Then adding that sysmon full name to ossec.conf to use sysmon logs in our Wazuh. Then removing security and system from the log analysis to minimize logging. 
 
-![image](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/bad21e3a-cdd2-4a64-8f60-1e62d361673c)
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/4e98dac6-8912-4a1d-a78e-bf5aa73836ec
 
-#### Open Event Viewer. Locate and expand Applications and Services Logs drop down. Locate and expand Microsoft drop down. Locate and expand Windows drop down. Locate and expand Sysmon drop down. right click Operational and select properties. In Gerenal tab copy the Full Name: Microsoft-Windows-Sysmon/Operational.
+#### Restarting the Wazuh service after configuring the ossec.conf to allow updated options to be available in our Wazuh.
 
-![image](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/f1000aa0-ab06-4797-95b1-4fa46c782e99)
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/5c5488ef-1410-4f15-8b9e-0942face3117
 
-#### Editing the ossec.conf not the copy. Open Notepad as administrator and then from notepate oopen ossec.conf. Within our syntax add the location copied. For ingest only the Sysmon and active response logs.
+#### Checking to see if sysmon populates in Wazuh
 
-![image](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/f48dffae-4bc3-4099-89cc-aa37180a0737)
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/c0a710f6-91ef-46d4-abae-372e4fbdd412
 
-#### After editing and saving the ossec.conf open services and restart the Wazuh Service
+#### Disabling windows security in the downloads file else cannot open minikatz
 
-![image](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/617e17eb-6a58-43f4-83ff-29ac2b792b70)
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/2063df5d-8840-4dfb-8555-e387cd0141d9
 
-#### In the linux vm with wazuh monitoring the sysmon on the windows machine by filtering only "sysmon"
+#### Disabling Chrome safe browsing else cannot download mimikatz
 
-![image](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/b3bed3e1-eaf9-4011-9490-d09168a85675)
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/2b5099e9-f16c-41da-9a82-5ccc98e764a0
 
-#### In the winwdows machine disable the windows security to be able to download mimikats.
+#### Downloading and running mimikatz
 
-![image](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/590c0640-049d-4e28-92b8-96a7b29d7690)
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/67695942-c976-46d3-98e8-bdb980dc0a66
 
-#### Also, In a web browser like google chrome turn off the safe browsing to be able to download. Go to Settings, Privacy and security, under safe browsing select no protection.
+#### Checking to see if mimikatz is pickup by Wazuh
 
-![image](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/a5fe786a-dcfb-488d-b150-b4f08273d6b2)
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/59124f12-2f7d-4eec-aec9-c00a01449872
 
+#### Making a backup copy of ossec.conf file. Then editing the ossec.conf file to allow all logs and json logs. Then restarting wazuh to update changes. Then checking to see if the log archives were created. Then editing the filebeats configuration to allow wazuh to be able to ingest the archive logs. Then restarting filebeats to update configuration.
 
-#### Mimikatz is a toll thatRad Hat hackers use extract credientals from a victim machine. 
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/506ce7a7-be7e-44c0-a644-8270dfe5d580
 
-![image](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/132aa02e-e339-44e6-982b-8b03c8b3e271)
+#### Editing the filebeats configuration to allow wazuh to be able to ingest the archive logs. Restarting filebeats to update configuration.
 
-#### Open powershell, change directory to mimikatz location, run mimikatz
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/47c9251b-9b02-402b-a8b9-87da93a5c100
 
-![image](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/7628e3be-dc45-49f4-857f-ce081f23949e)
+#### Creating an index pattern for archive logs to view all the logs regardless is wazuh triggers an alert.
 
-####
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/d6ff5e9a-4ee3-4bd1-a798-8f27a1020602
 
+#### Checking to see if the archives logs and can conclude event are happening in those files. Then grep "mimikatz" with flag -i to ignore case sensitivity to see if an even was picked up. That event was indeed picked up. Then going back to wazuh in discover the in the filter box type mimikats to see the events in more detail.
+
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/37a21341-92ec-46f3-833d-c67ddfac052e
+
+#### Creating a custom rule specificly for mimikatz. Start by copying the 0800-sysmon_id_3.xml and then add it below rule id 100001. Then changing the id 92000 to 100002 in good pratice. Then changing from level 4 to level 15 the highest severity. Changing the field name from "win.eventdata.parentImage" to "win.eventdata.originalFileName" to ensure the file is detected even if the file name is changed. Then changing type to "pre2">(?i)mimikatz\.exe to search speciify for mimikatz. Then removing line 22 to be able to view all the log. Then changing discription name to "Mimikatz Usage Detected." Then changing id to T1003 for credital dumping. Then saving changes and restart wazuh to update new settings.
+
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/47a64e94-d772-4a3e-9f24-4239bf4e4bcf
 
 #### Step 5: 
