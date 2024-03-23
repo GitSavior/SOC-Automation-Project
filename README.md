@@ -7,12 +7,18 @@ Wazuh instance with soar integration with a fully functional case management usi
 ### Skills Learned
 
 - Creating a diagram to show how our lab is built out logically
+- Creating VM Servers with Installation of Wazuh and TheHive
+- Configuring Thehive Server, Wazuh Server, and Windows to have telemetry
 - 
 
 ### Tools Used
 
 - Diagram (draw.io) 
 - Virtual Box
+- Wazuh
+- TheHive
+- Sysmon
+- Mimikatz
 
 ### Guides
 
