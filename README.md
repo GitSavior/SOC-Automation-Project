@@ -103,19 +103,19 @@ https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/59124f12-2f
 
 https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/506ce7a7-be7e-44c0-a644-8270dfe5d580
 
-#### Editing the filebeats configuration to allow wazuh to be able to ingest the archive logs. Restarting filebeats to update configuration.
+#### Creating an index pattern for archive logs to view all the logs regardless is wazuh triggers an alert.
 
 https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/47c9251b-9b02-402b-a8b9-87da93a5c100
 
-#### Creating an index pattern for archive logs to view all the logs regardless is wazuh triggers an alert.
+#### Checking to see if the archives logs and can conclude event are happening in those files. Then grep "mimikatz" with flag -i to ignore case sensitivity to see if an even was picked up. That event was indeed picked up. Then going back to wazuh in discover the in the filter box type mimikats to see the events in more detail.
 
 https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/d6ff5e9a-4ee3-4bd1-a798-8f27a1020602
 
-#### Checking to see if the archives logs and can conclude event are happening in those files. Then grep "mimikatz" with flag -i to ignore case sensitivity to see if an even was picked up. That event was indeed picked up. Then going back to wazuh in discover the in the filter box type mimikats to see the events in more detail.
+#### Creating a custom rule specificly for mimikatz. Start by copying the 0800-sysmon_id_3.xml and then add it below rule id 100001. Then changing the id 92000 to 100002 in good pratice. Then changing from level 4 to level 15 the highest severity. Changing the field name from "win.eventdata.parentImage" to "win.eventdata.originalFileName" to ensure the file is detected even if the file name is changed. Then changing type to "pre2">(?i)mimikatz\.exe to search speciify for mimikatz. Then removing line 22 to be able to view all the log. Then changing discription name to "Mimikatz Usage Detected." Then changing id to T1003 for credital dumping. Then saving changes and restart wazuh to update new settings.
 
 https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/37a21341-92ec-46f3-833d-c67ddfac052e
 
-#### Creating a custom rule specificly for mimikatz. Start by copying the 0800-sysmon_id_3.xml and then add it below rule id 100001. Then changing the id 92000 to 100002 in good pratice. Then changing from level 4 to level 15 the highest severity. Changing the field name from "win.eventdata.parentImage" to "win.eventdata.originalFileName" to ensure the file is detected even if the file name is changed. Then changing type to "pre2">(?i)mimikatz\.exe to search speciify for mimikatz. Then removing line 22 to be able to view all the log. Then changing discription name to "Mimikatz Usage Detected." Then changing id to T1003 for credital dumping. Then saving changes and restart wazuh to update new settings.
+#### Changing the name of "mimikatz" to "notmimikatz" to verify if our new Wazuh setup will recognize that the mimikatz software executed on the Windows 10 computer is the same file.
 
 https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/47a64e94-d772-4a3e-9f24-4239bf4e4bcf
 
