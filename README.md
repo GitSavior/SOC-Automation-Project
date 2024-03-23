@@ -7,6 +7,7 @@ Wazuh instance with soar integration with a fully functional case management usi
 ### Skills Learned
 
 - Creating a diagram to show how our lab is built out logically
+- Creating a diagram to show the workflow logical process
 - Creating VM Servers with Installation of Wazuh and TheHive
 - Configuring Thehive Server, Wazuh Server, and Windows to have telemetry
 - 
@@ -28,9 +29,11 @@ Wazuh instance with soar integration with a fully functional case management usi
 
 ## Steps
 
-### Step 1: Creating a diagram and how to build out our lab logically. Build a visual to understand of data will flow and the pieces requires that makes it work.
+### Step 1: Creating a diagram and how to build out our lab logically. Build a visual to understand of data will flow and the pieces requires that makes it work. Then build a workflow chart to show the logicial process flow of the lab.
 
 ![Network Diagram drawio](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/923cd150-3e02-41f1-92b9-53b616408172)
+
+![2](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/989b3b5b-f76d-4923-b2bc-3f3e14d702d6)
 
 ### Step 2: Install applications and virtual machines. One Windows 10 OS running Sysmon, one Ubuntu Server running Wazuh, and one Ubuntu running Server TheHive.
 
