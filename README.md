@@ -20,6 +20,7 @@ Wazuh instance with soar integration with a fully functional case management usi
 - TheHive
 - Sysmon
 - Mimikatz
+- Shuffle
 
 ### Guides
 
@@ -122,4 +123,9 @@ https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/37a21341-92
 
 https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/47a64e94-d772-4a3e-9f24-4239bf4e4bcf
 
-#### Step 5: 
+#### Step 5: Connect shuffle our security orchestration, automation, and response (SOAR) platform. Then Send a alert to TheHive and send to SOC analyst via Email.
+
+#### Creating a new workflow
+
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/21ad3cad-4f29-46d3-94e0-90b8e866e923
+
