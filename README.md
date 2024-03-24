@@ -129,3 +129,25 @@ https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/47a64e94-d7
 
 https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/21ad3cad-4f29-46d3-94e0-90b8e866e923
 
+#### 2
+
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/b1e1ca7d-018a-40a8-a392-33e4e27563f4
+
+#### 3
+
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/5841ebe0-728b-45e8-9d20-bd29844a3e80
+
+#### 4
+
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/392e2576-145b-4a7e-8975-72a7b1275c87
+
+#### 5
+
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/1dd209f6-12e6-4dd7-a85e-e32ee0bdb6d9
+
+
+
+
+
+
+
