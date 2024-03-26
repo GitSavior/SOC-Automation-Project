@@ -20,7 +20,8 @@ Wazuh instance with soar integration with a fully functional case management usi
 - TheHive
 - Sysmon
 - Mimikatz
-- Shuffle
+- Shuffle (SOAR)
+- Virustotal
 
 ### Guides
 
@@ -148,6 +149,8 @@ https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/1dd209f6-12
 #### The execution result reflects the webpage's output. This file was detected as malicious by 63 out of 72 security vendors.
 
 ![image](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/7e77a56a-5909-4112-b91b-0f867a8fd351)
+
+####
 
 
 
