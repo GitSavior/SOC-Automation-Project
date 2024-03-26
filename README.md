@@ -125,26 +125,29 @@ https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/47a64e94-d7
 
 #### Step 5: Connect shuffle our security orchestration, automation, and response (SOAR) platform. Then Send a alert to TheHive and send to SOC analyst via Email.
 
-#### Creating a new workflow
+#### Starting a new workflow. We're adding the webhook app to our process. Copying the URI from the webhook app and pasting it into our ossec.conf file placed on our Wazuh manager. Setting the control find action to "repeat back to me" and calling the execution argument "$exec."
 
 https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/21ad3cad-4f29-46d3-94e0-90b8e866e923
 
-#### 2
+#### Configure the wazuh ossec.conf file by adding an integration tag and inserting the webhook URI so that the wazuh manager can connect to Shuffle. Replaced <level> tags with <rule_id> and put "100002" between them to send the rule id to shuffle rather than the level number. <option> was removed because it was not being used. Restart wazuh to allow the changes to take effect, and then verify the status.
 
 https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/b1e1ca7d-018a-40a8-a392-33e4e27563f4
 
-#### 3
+#### 3 Starting the webhook and running mimikatz.exe in the windows 10 machine to see the executions within shuffle 
 
 https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/5841ebe0-728b-45e8-9d20-bd29844a3e80
 
-#### 4
+#### 4 The hash is concatenated with its hash type, which is a problem. It is critical to extract the hash type added to the hash to allow automation when delivering a hash value to virustotal; otherwise, the value is unreadable because virustotal just looks for the hash value, not the type, while conducting its search. This is accomplished within shuffle by selecting the search action "Regex capture group", then selecting the hashes from the "Input data" after clicking the "+" button, and finally adding a Regex value created by AI to remove the hash type from the beginning of each hash. 
 
 https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/392e2576-145b-4a7e-8975-72a7b1275c87
 
-#### 5
+#### Create a virustotal account and copy the unique API key generated for that account. Edit the newly added Virustotal workflow and add the API key, then expand the Hash parameter by clicking the "+" button and selecting the regex output . Save. Rerun the previous execution after adding and configuring the virustotal program to examine what virustotal does and what results it produces.
 
 https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/1dd209f6-12e6-4dd7-a85e-e32ee0bdb6d9
 
+#### The execution result reflects the webpage's output. This file was detected as malicious by 63 out of 72 security vendors.
+
+![image](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/7e77a56a-5909-4112-b91b-0f867a8fd351)
 
 
 
