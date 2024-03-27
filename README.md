@@ -150,9 +150,17 @@ https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/1dd209f6-12
 
 ![image](https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/7e77a56a-5909-4112-b91b-0f867a8fd351)
 
-####
+#### Create a new organization and two new users for it, one as a normal account and the other as a service account. Add a password for the 'Project2' user and build a new API with the 'SOAR' user. We'll be using that API to authenticate with Shuffle. Log into the 'Project2' account, which will populate the alerts provided by our Shuffle (SOAR).
 
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/79499afc-013c-40d3-8e96-8b913a7e9eff
 
+#### Configuring shuffle to work with TheHive
+
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/5620deb6-844a-4dff-8592-23bcc85823f0
+
+#### After running the TheHive program from shuffle, the results are displayed in the management for our TheHive Server. Now we're configuring the email app in our SOAR to send emails to our temporary email address using 'SquareX.'
+
+https://github.com/GitSavior/SOC-Automation-Project/assets/162067776/8a973f2f-7e74-4dcd-adfe-57da1fedb7f5
 
 
 
