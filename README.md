@@ -10,7 +10,7 @@ Wazuh instance with soar integration with a fully functional case management usi
 - Creating a diagram to show the workflow logical process
 - Creating VM Servers with Installation of Wazuh and TheHive
 - Configuring Thehive Server, Wazuh Server, and Windows to have telemetry
-- 
+- Utilize Shuffle to integrate our security orchestration, automation, and response (SOAR) platform, followed by alerting TheHive and sending notifications to the SOC analyst via email.
 
 ### Tools Used
 
@@ -22,6 +22,7 @@ Wazuh instance with soar integration with a fully functional case management usi
 - Mimikatz
 - Shuffle (SOAR)
 - Virustotal
+- SquareX
 
 ### Guides
 
